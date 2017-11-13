@@ -26,7 +26,7 @@ from io import UnsupportedOperation
 from .hooks import default_hooks
 from .structures import CaseInsensitiveDict
 
-from .auth import HTTPBasicAuth
+from .auth import HTTPBasicAuth, HTTPDigestAuth
 from .cookies import cookiejar_from_dict, get_cookie_header, _copy_cookie_jar
 from .exceptions import (
     HTTPError, MissingSchema, InvalidURL, ChunkedEncodingError,
@@ -535,6 +535,9 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
             if isinstance(auth, tuple) and len(auth) == 2:
                 # special-case basic HTTP auth
                 auth = HTTPBasicAuth(*auth)
+
+                if not auth:
+                    auth = HTTPDigestAuth(*auth)
 
             # Allow auth to make its changes.
             r = auth(self)

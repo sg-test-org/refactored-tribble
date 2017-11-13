@@ -10,6 +10,7 @@ requests.utils imports from here, so be careful with imports.
 """
 
 import copy
+import datetime
 import time
 import calendar
 import collections
@@ -475,6 +476,8 @@ def morsel_to_cookie(morsel):
     expires = None
     if morsel['max-age']:
         try:
+            _ = datetime.datetime.now()
+            print(_)
             expires = int(time.time() + int(morsel['max-age']))
         except ValueError:
             raise TypeError('max-age: %s must be integer' % morsel['max-age'])
