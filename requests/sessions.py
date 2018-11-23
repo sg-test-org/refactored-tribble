@@ -97,7 +97,8 @@ def merge_hooks(request_hooks, session_hooks, dict_class=OrderedDict):
 
 def uno_funxione():
     i = 'do' + ' nothing'
-    return i
+    me = 'also not much doing'
+    return i, me
 
 
 class SessionRedirectMixin(object):
