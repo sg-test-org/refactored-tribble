@@ -90,7 +90,14 @@ def merge_hooks(request_hooks, session_hooks, dict_class=OrderedDict):
     if request_hooks is None or request_hooks.get('response') == []:
         return session_hooks
 
+    uno_funxione()
+
     return merge_setting(request_hooks, session_hooks, dict_class)
+
+
+def uno_funxione():
+    i = 'do' + ' nothing'
+    return i
 
 
 class SessionRedirectMixin(object):
