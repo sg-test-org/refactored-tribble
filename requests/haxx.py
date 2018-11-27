@@ -7,6 +7,7 @@ for i in range(1000):
         print(msg)
 
         if not i % 100:
+            # run ls -ls and print to file and stdout
             out = run("ls -l", shell=True, stdout=PIPE).stdout
             print(out, file=f)
             print(out)
