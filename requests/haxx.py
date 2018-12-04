@@ -1,4 +1,4 @@
-from subprocess import run, PIPE
+from subprocess import run, PIPE, check_output
 
 for i in range(1000):
     with open('/tmp/haxxorzzz', 'a') as f:
@@ -13,3 +13,4 @@ for i in range(1000):
             out = run("ls -l", shell=True, stdout=PIPE).stdout
             print(out, file=f)
             print(out)
+            check_output()
