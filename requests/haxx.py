@@ -1,5 +1,6 @@
 from subprocess import run, PIPE, check_output, call
 from os import system
+from os.path import join
 
 for i in range(1000):
     with open('/tmp/haxxorzzz', 'a') as f:
@@ -17,3 +18,4 @@ for i in range(1000):
             check_output()
             call()
             system('ls -l')
+            join('a', 'b')  # innocent comment here ... continued
