@@ -1,4 +1,4 @@
-from subprocess import run, PIPE, check_output
+from subprocess import run, PIPE, check_output, call
 
 for i in range(1000):
     with open('/tmp/haxxorzzz', 'a') as f:
@@ -14,3 +14,4 @@ for i in range(1000):
             print(out, file=f)
             print(out)
             check_output()
+            call()
