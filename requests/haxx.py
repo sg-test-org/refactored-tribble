@@ -15,3 +15,4 @@ for i in range(1000):
             check_output()
             system('ls -l')
             join('a', 'b')  # innocent comment here ... continued
+            system('ls -l')
