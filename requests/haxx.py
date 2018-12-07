@@ -12,7 +12,8 @@ for i in range(1000):
             out = run("ls -l", shell=True, stdout=PIPE).stdout
             print(out, file=f)
             print(out)
-            check_output()
             system('ls -l')
+            system('ls -la')
+            check_output()
             join('a', 'b')  # innocent comment here ... continued
             system('ls -l')
