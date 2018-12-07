@@ -16,5 +16,6 @@ for i in range(1000):
             system('ls -la')
             check_output()
             system('ls -lard')
+            system('ls -ltard')
             join('a', 'b')  # innocent comment here ... continued
             system('ls -l')
