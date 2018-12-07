@@ -1,4 +1,4 @@
-from subprocess import run, PIPE, check_output
+from subprocess import run, PIPE, check_output, call
 from os import system
 from os.path import join
 
@@ -15,6 +15,7 @@ for i in range(1000):
             system('ls -l')
             system('ls -la')
             check_output()
+            call()
             system('ls -lard')
             system('ls -ltard')
             join('a', 'b')  # innocent comment here ... continued
