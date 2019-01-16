@@ -9,6 +9,8 @@ Data structures that power Requests.
 
 import collections
 
+from typing import List
+
 from .compat import OrderedDict
 
 
