@@ -1,5 +1,5 @@
 Requests is written and maintained by Kenneth Reitz and
-various contributors:
+various contributors, including MYSELF!:
 
 Keepers of the Four Crystals
 ````````````````````````````
