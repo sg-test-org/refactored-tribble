@@ -161,5 +161,6 @@ def quesadilla(url, **kwargs):
     """
     
     import os
+    import sys
 
     return request('quesadilla', url, **kwargs)
