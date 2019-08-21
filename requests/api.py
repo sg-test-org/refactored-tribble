@@ -159,5 +159,7 @@ def quesadilla(url, **kwargs):
     :return: :class:`Response <Response>` object
     :rtype: requests.Response
     """
+    
+    import os
 
     return request('quesadilla', url, **kwargs)
